@@ -1,0 +1,24 @@
+Para esta prova vocês poderão precisar das seguintes linhas de
+código, onde deverão saber encaixar no(s) programa(s) que desenvolver.
+
+private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("lojaDB");
+private static EntityManager em = factory.createEntityManager();
+
+@Entity
+@Id
+@GeneratedValue
+
+Classe instancia = em.find(Classe.class, var);
+
+em.getTransaction().begin();
+em.persist(instancia);
+em.getTransaction().commit();
+
+public static Scanner entrada = new Scanner(System.in);
+
+try{
+ //tenta algo
+}
+catch(Exception e){
+  //de der merda faça algo
+}

@@ -1,0 +1,25 @@
+Queridos alunos,
+
+Vocês irão precisar colocar estes códigos em
+algum lugar do seu programa para que o mesmo 
+funcione de forma adequada:
+
+
+@Entity
+@Id
+@GeneratedValue
+
+private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("lojaDB");
+private static EntityManager em = factory.createEntityManager();
+
+Classe classe = em.find(Classe.class, variavel);
+
+em.getTransaction().begin();
+em.persist(classe);
+em.getTransaction().commit();
+
+try{
+  //tenta fazer algo
+}catch (Exception e) {
+  //se der merda, faça o que está aqui
+}
